@@ -1,5 +1,7 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+
+
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -70,12 +72,13 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git
-    vi-mode
+plugins=(
+  aliases
+  docker
+  git
+  vi-mode
+  z
 )
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-[ -f /opt/homebrew/etc/profile.d/autojump.sh  ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,3 +110,28 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias c=clear
+alias f="fzf"
+alias h="cd"
+alias n="nvim"
+alias p=pwd
+alias r="source ~/.zshrc"
+alias v="vim"
+
+alias al=alias
+alias cf='cd $(find . -type d | fzf)'
+alias vf="vifm"
+alias wh=which
+
+
+# Ubuntu
+#export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#808080'
+#source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Macos
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -f /opt/homebrew/etc/profile.d/autojump.sh  ] && . /opt/homebrew/etc/profile.d/autojump.sh
+
