@@ -18,3 +18,5 @@ bash .vim_runtime/install_awesome_vimrc.sh
 
 git config --global user.email "gaimanjing@gmail.com"
 git config --global user.name "gaimanjing"
+
+chsh -s `which zsh`
